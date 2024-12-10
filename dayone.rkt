@@ -1,5 +1,6 @@
 #lang racket
 
+
 (define records (map string-split (file->lines "input.txt")))
 
 (define puzzle-data
@@ -10,9 +11,6 @@
 
 (define (Fbuild-pairs list1 list2)
   (map list (sort list1 <) (sort list2 <)))
-
-(define (Freverse-list-pairs list-of-pairs)
-  (map reverse list-of-pairs))
 
 (define (Fdistance-between-pairs list-of-pairs)
   (map abs (map (lambda (x) (- (car x) (car (cdr x)))) list-of-pairs)))
