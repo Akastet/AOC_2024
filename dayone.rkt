@@ -1,6 +1,5 @@
 #lang racket
 
-
 (define records (map string-split (file->lines "input.txt")))
 
 (define puzzle-data
